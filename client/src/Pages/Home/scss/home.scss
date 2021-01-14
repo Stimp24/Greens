@@ -1,14 +1,19 @@
 .randomppl {
-  background-image: url("../img/niceHome.jpg");
+  background-image: url("../img/highrise.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
-  height: 660px;
+  height: 360px;
+
 
   .titleColor {
     color: #ffffff;
     font-size: 60px;
-    font-weight: 700;
+
+  }
+  .font-text{
+    font-family: 'Roboto', sans-serif;
+
   }
 
   .subTitleColor {

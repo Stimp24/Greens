@@ -11,13 +11,13 @@ class Home extends Component {
             return (
                   <div>
                         <MastHeadwithCOA
-                              sectionClass="randomppl jumbotron"
-                              // title="Real Estate Site"
-                              // titleClass="titleColor"
-                              // subTitleClass="subTitleColor"
-                              // subTitle="Most popular place to meet random people from around the world"
-                              // buttonClass="btn btn-primary btn-lg adjBtn btn-light"
-                              // button="Get Started"
+                              sectionClass="randomppl"
+                              title="Best place to buy property for fair market value"
+                              titleClass="text-light text-center"
+                        // subTitleClass="subTitleColor"
+                        // subTitle="Most popular place to meet random people from around the world"
+                        // buttonClass="btn btn-primary btn-lg adjBtn btn-light"
+                        // button="Get Started"
                         />
 
                         <SliderHomes
@@ -25,7 +25,7 @@ class Home extends Component {
                               outterContainer="col-12 slide"
                               state="Florida"
                         />
-                        <HowItWorks/>
+                        <HowItWorks />
                         <ContentPanelWithImg
                               sectionClass="why"
                               img="content1Img"
@@ -37,7 +37,7 @@ class Home extends Component {
 
 
                         />
-                        
+
 
                   </div>
             )
