@@ -1,0 +1,38 @@
+.randomppl {
+  background-image: url("../img/niceHome.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 660px;
+
+  .titleColor {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .subTitleColor {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .adjBtn {
+    color: #000000;
+  }
+}
+.reSlider {
+  .slide {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    height: 300px;
+  }
+}
+.why {
+  .content1Img {
+    background-image: url("../img/subdivision.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+  }
+}

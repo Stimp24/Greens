@@ -1,0 +1,21 @@
+.mmpplList {
+  .manageImage {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .cardHeader {
+    height: 125px;
+  }
+  .cardHeader-color {
+    background-color: #124676;
+  }
+  .divider {
+    border-bottom: 1px solid black;
+  }
+  .card-text {
+    color: #000000;
+  }
+}

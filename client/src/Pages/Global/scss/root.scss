@@ -1,0 +1,253 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+//breakpoints
+$breakpoints: xs, sm, md, lg, xl;
+$bp1: nth($breakpoints, 1);
+$bp2: nth($breakpoints, 2);
+$bp3: nth($breakpoints, 3);
+$bp4: nth($breakpoints, 4);
+$bp5: nth($breakpoints, 5);
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+
+//colors
+$re-blue: #00416d;
+$re-red: #f8bd7f;
+$re-white: #f5f1da;
+
+.-re_,
+.-re_ {
+  &position--fixed {
+    position: fixed;
+  }
+
+  $loop-end: 45;
+
+  @function add-unit-to-value($value, $unit) {
+    @return if(value != 0, $value + $unit, 0);
+  }
+
+  @function increment-by-5($i, $unit) {
+    @return add-unit-to-value(0 + ($i * 5), $unit);
+  }
+
+  @for $i from 0 to $loop-end {
+    &pb-#{$i * 5} {
+      padding-bottom: increment-by-5($i, px) !important;
+    }
+    &pt-#{$i * 5} {
+      padding-top: increment-by-5($i, px) !important;
+    }
+    &pl-#{$i * 5} {
+      padding-left: increment-by-5($i, px) !important;
+    }
+    &pr-#{$i * 5} {
+      padding-right: increment-by-5($i, px) !important;
+    }
+    &mb-#{$i * 5} {
+      margin-bottom: increment-by-5($i, px) !important;
+    }
+    &mt-#{$i * 5} {
+      margin-top: increment-by-5($i, px) !important;
+    }
+    &mr-#{$i * 5} {
+      margin-right: increment-by-5($i, px) !important;
+    }
+    &ml-#{$i * 5} {
+      margin-left: increment-by-5($i, px) !important;
+    }
+    &mx-#{$i * 5} {
+      margin-right: increment-by-5($i, px) !important;
+      margin-left: increment-by-5($i, px) !important;
+    }
+    &px-#{$i * 5} {
+      padding-right: increment-by-5($i, px) !important;
+      padding-left: increment-by-5($i, px) !important;
+    }
+  }
+  @media (min-width: 576px) {
+    @for $i from 0 to $loop-end {
+      &pb-#{$bp2}-#{$i * 5} {
+        padding-bottom: increment-by-5($i, px) !important;
+      }
+      &pt-#{$bp2}-#{$i * 5} {
+        padding-top: increment-by-5($i, px) !important;
+      }
+      &pl-#{$bp2}-#{$i * 5} {
+        padding-left: increment-by-5($i, px) !important;
+      }
+      &pr-#{$bp2}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+      }
+      &mb-#{$bp2}-#{$i * 5} {
+        margin-bottom: increment-by-5($i, px) !important;
+      }
+      &mt-#{$bp2}-#{$i * 5} {
+        margin-top: increment-by-5($i, px) !important;
+      }
+      &mr-#{$bp2}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+      }
+      &ml-#{$bp2}-#{$i * 5} {
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &mx-#{$bp2}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &px-#{$bp2}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+        padding-left: increment-by-5($i, px) !important;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    @for $i from 0 to $loop-end {
+      &pb-#{$bp3}-#{$i * 5} {
+        padding-bottom: increment-by-5($i, px) !important;
+      }
+      &pt-#{$bp3}-#{$i * 5} {
+        padding-top: increment-by-5($i, px) !important;
+      }
+      &pl-#{$bp3}-#{$i * 5} {
+        padding-left: increment-by-5($i, px) !important;
+      }
+      &pr-#{$bp3}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+      }
+      &mb-#{$bp3}-#{$i * 5} {
+        margin-bottom: increment-by-5($i, px) !important;
+      }
+      &mt-#{$bp3}-#{$i * 5} {
+        margin-top: increment-by-5($i, px) !important;
+      }
+      &mr-#{$bp3}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+      }
+      &ml-#{$bp3}-#{$i * 5} {
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &mx-#{$bp3}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &px-#{$bp3}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+        padding-left: increment-by-5($i, px) !important;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    @for $i from 0 to $loop-end {
+      &pb-#{$bp4}-#{$i * 5} {
+        padding-bottom: increment-by-5($i, px) !important;
+      }
+      &pt-#{$bp4}-#{$i * 5} {
+        padding-top: increment-by-5($i, px) !important;
+      }
+      &pl-#{$bp4}-#{$i * 5} {
+        padding-left: increment-by-5($i, px) !important;
+      }
+      &pr-#{$bp4}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+      }
+      &mb-#{$bp4}-#{$i * 5} {
+        margin-bottom: increment-by-5($i, px) !important;
+      }
+      &mt-#{$bp4}-#{$i * 5} {
+        margin-top: increment-by-5($i, px) !important;
+      }
+      &mr-#{$bp4}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+      }
+      &ml-#{$bp4}-#{$i * 5} {
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &mx-#{$bp4}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &px-#{$bp4}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+        padding-left: increment-by-5($i, px) !important;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    @for $i from 0 to $loop-end {
+      &pb-#{$bp5}-#{$i * 5} {
+        padding-bottom: increment-by-5($i, px) !important;
+      }
+      &pt-#{$bp5}-#{$i * 5} {
+        padding-top: increment-by-5($i, px) !important;
+      }
+      &pl-#{$bp5}-#{$i * 5} {
+        padding-left: increment-by-5($i, px) !important;
+      }
+      &pr-#{$bp5}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+      }
+      &mb-#{$bp5}-#{$i * 5} {
+        margin-bottom: increment-by-5($i, px) !important;
+      }
+      &mt-#{$bp5}-#{$i * 5} {
+        margin-top: increment-by-5($i, px) !important;
+      }
+      &mr-#{$bp5}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+      }
+      &ml-#{$bp5}-#{$i * 5} {
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &mx-#{$bp5}-#{$i * 5} {
+        margin-right: increment-by-5($i, px) !important;
+        margin-left: increment-by-5($i, px) !important;
+      }
+      &px-#{$bp5}-#{$i * 5} {
+        padding-right: increment-by-5($i, px) !important;
+        padding-left: increment-by-5($i, px) !important;
+      }
+    }
+  }
+}
+.re-brand-blue {
+  color: #124676 !important;
+}
+.re-bkcolor {
+  background-color: #124676 !important;
+}
+.reFont {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.reFontSemi {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+.reColorText {
+  color: #fff !important;
+}
+.reSecondaryColor {
+  background-color: #dc3545 !important;
+}
+.reFontSize-20 {
+  font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: 20px !important;
+  }
+}
+.re_removeBullet {
+  list-style-type: none;
+}
+.re_successCheck {
+  color: #009900;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}

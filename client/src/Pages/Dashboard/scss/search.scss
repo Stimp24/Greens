@@ -1,0 +1,19 @@
+.mm-search {
+      .btn-search {
+        background: #124676;
+        border-radius: 0;
+        color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #124676;
+      }
+      .btn-search:link,
+      .btn-search:visited {
+        color: #fff;
+      }
+      .btn-search:active,
+      .btn-search:hover {
+        background: #124676;
+        color: #fff;
+      }
+    }

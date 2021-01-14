@@ -1,0 +1,26 @@
+.-ta_description {
+      .desc_container {
+        background-color: #dee2e6;
+      }
+      .ta_text {
+        color: #124676;
+        font-size: 16px;
+      }
+      .ta_title {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .scroll {
+        -ms-overflow-style: none;
+        height: 500px;
+        overflow: auto;
+      }
+      .scroll::-webkit-scrollbar {
+        display: none;
+      }
+      .outlineBorder {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+    }
