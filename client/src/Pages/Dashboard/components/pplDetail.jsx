@@ -5,6 +5,7 @@ import React from 'react'
 import Tab from "../../Global/components/reusuable/Tab/tab"
 import QuickHits from "../../Global/components/reusuable/Tab/QuickHits"
 import DeepDive from "../../Global/components/reusuable/Tab/deepDive"
+
 //scss
 import "../scss/pplDetail.scss"
 
@@ -47,7 +48,6 @@ export default function pplDetail(props) {
                                     </div>
                               </div>
                         </div>
-
                   </section>
 
 

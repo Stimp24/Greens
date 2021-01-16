@@ -11,7 +11,7 @@ class Home extends Component {
             return (
                   <div>
                         <MastHeadwithCOA
-                              sectionClass="randomppl"
+                              sectionClass="randomppl -re_mb-40"
                               title="Best place to buy property for fair market value"
                               titleClass="text-light text-center"
                         // subTitleClass="subTitleColor"
@@ -21,11 +21,12 @@ class Home extends Component {
                         />
 
                         <SliderHomes
-                              sectionClass="reSlider"
+                              sectionClass="reSlider -re_mb-40"
                               outterContainer="col-12 slide"
                               state="Florida"
                         />
                         <HowItWorks />
+
                         <ContentPanelWithImg
                               sectionClass="why"
                               img="content1Img"

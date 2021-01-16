@@ -30,7 +30,7 @@ const HowItWorks = () => {
               </div>
               <div className="card-body">
                 <h5 className="card-title center-title hiw-col">
-                  Aenean commodo ligula eget dolor.
+                  Sign Up
                 </h5>
                 <p className="card-text center-text hiw-col">
                   Aenean commodo ligula eget dolor.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -44,7 +44,7 @@ const HowItWorks = () => {
                 {" "}
               </div>
               <div className="card-body">
-                <h5 className="card-title center-title hiw-col">Aenean commodo ligula eget dolor.</h5>
+                <h5 className="card-title center-title hiw-col">Find home</h5>
                 <p className="card-text center-text hiw-col">
                   Aenean commodo ligula eget dolor.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                 </p>
@@ -58,7 +58,7 @@ const HowItWorks = () => {
               </div>
               <div className="card-body">
                 <h5 className="card-title center-title hiw-col">
-                  Aenean commodo ligula eget dolor.
+                  Submit Offer
                 </h5>
                 <p className="card-text center-text hiw-col">
                   Aenean commodo ligula eget dolor.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.

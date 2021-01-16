@@ -1,10 +1,12 @@
 .-reBackground {
-.searchButton{
-  background-color: #ffffff;
-  width: 50px;
+  .searchButton {
+    background-color: #ffffff;
+    width: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+  }
+  .re_search-box {
+    height: 54px;
+  }
 }
-.re_search-box{
-  height:50px
-}
-}
-
