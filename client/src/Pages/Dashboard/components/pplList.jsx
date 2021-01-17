@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function PplList(props) {
       const { items } = props;
       return (
-            <div className="col-4">
+            <div className="col-6">
                   <Link
                         to={{
                               pathname: "/users/" + items.id,
