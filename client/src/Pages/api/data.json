@@ -58,13 +58,13 @@
                         "pictures": "https://ap.rdcpix.com/80eb8ac58b1e000b945ad94b43b46fe4l-m552664619od-w1024_h768.jpg"
                   },
                   "fullAddress": {
-                        "streetNumber": 580,
-                        "streetName": "CharlieFuller Rd",
+                        "streetNumber": 157,
+                        "streetName": "Parkway Dr",
                         "city": "Grantville",
                         "state": "GA",
-                        "zipCode": 30220,
-                        "latitude": 0,
-                        "longitude": 0
+                        "zipCode": 30213,
+                        "latitude": 33.587020,
+                        "longitude": -84.602120
                   },
                   "price": 159000,
                   "saleType": "Bank Owned",

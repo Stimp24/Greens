@@ -5,9 +5,9 @@ import React, { Component } from 'react'
 import FilterType from "./components/filterType"
 import PplList from "./components/pplList"
 import Search from "../Global/components/reusuable/SearchBar/search"
-import Map from "./components/map"
+//import Map from "./components/map"
 import * as Data from '../api/data.json'
-import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps'
+import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 export class Dashboard extends Component {
       constructor(props) {
             super(props);
@@ -26,8 +26,8 @@ export class Dashboard extends Component {
                                     city: "Grantville",
                                     state: "GA",
                                     zipCode: 30220,
-                                    latitude: 0,
-                                    longitude: 0,
+                                    latitude: 33.173830,
+                                    longitude: -84.769010,
                               },
                               price: "159,000",
                               saleType: "Bank Owned",
@@ -52,8 +52,8 @@ export class Dashboard extends Component {
                                     city: "Grantville",
                                     state: "GA",
                                     zipCode: 30220,
-                                    latitude: 0,
-                                    longitude: 0,
+                                    latitude: 33.236180,
+                                    longitude: -84.822270,
                               },
                               price: 159000,
                               saleType: "Bank Owned",
@@ -73,13 +73,13 @@ export class Dashboard extends Component {
                                     pictures: "https://ap.rdcpix.com/80eb8ac58b1e000b945ad94b43b46fe4l-m552664619od-w1024_h768.jpg"
                               },
                               fullAddress: {
-                                    streetNumber: 580,
-                                    streetName: "CharlieFuller Rd",
+                                    streetNumber: 157,
+                                    streetName: "Parkway Dr",
                                     city: "Grantville",
                                     state: "GA",
-                                    zipCode: 30220,
-                                    latitude: 0,
-                                    longitude: 0,
+                                    zipCode: 30213,
+                                    latitude: 33.587020,
+                                    longitude: -84.602120
                               },
                               price: 159000,
                               saleType: "Bank Owned",
@@ -104,8 +104,8 @@ export class Dashboard extends Component {
                                     city: "Atlanta",
                                     state: "GA",
                                     zipCode: 30331,
-                                    latitude: 0,
-                                    longitude: 0,
+                                    latitude: 33.703980,
+                                    longitude: -84.508910,
                               },
                               price: "285,000",
                               saleType: "Pending",
@@ -126,11 +126,38 @@ export class Dashboard extends Component {
                   propertyType: "",
                   bed: "",
                   bath: "",
-
+                  showingInfoWindow: false,  // Hides or shows the InfoWindow
+                  activeMarker: {},          // Shows the active marker upon click
+                  selectedPlace: {},          // Shows the InfoWindow to the selected place upon a marker
+                  stores: [{ lat: 47.49855629475769, lng: -122.14184416996333 },
+                  { latitude: 47.359423, longitude: -122.021071 },
+                  { latitude: 47.2052192687988, longitude: -121.988426208496 },
+                  { latitude: 47.6307081, longitude: -122.1434325 },
+                  { latitude: 47.3084488, longitude: -122.2140121 },
+                  { latitude: 47.5524695, longitude: -122.0425407 }]
             };
             this.handleChange = this.handleChange.bind(this);
       }
 
+      displayMarkers = () => {
+            return this.state.results.map((store, index) => {
+                  return <Marker key={index} id={index} position={{
+                        lat: store.fullAddress.latitude,
+                        lng: store.fullAddress.longitude
+                  }}
+
+                        onClick={this.onMarkerClick}
+                        name={store.fullAddress.streetName} />
+
+            })
+      }
+      // markerInfo = (props) => {
+      //       return (
+      //             <div>
+      //                   {` ${store.fullAddress.streetNumber} ${store.fullAddress.streetName}`}
+      //             </div>
+      //       )
+      // }
       // componentDidMount() {
       //       fetch(`https://randomuser.me/api/?results=15`)
       //             .then(response => response.json())
@@ -142,9 +169,28 @@ export class Dashboard extends Component {
                   [e.target.name]: e.target.value
             });
       };
+      onMarkerClick = (props, marker, e) =>
+            this.setState({
+                  selectedPlace: props,
+                  activeMarker: marker,
+                  showingInfoWindow: true
+            });
+
+      onClose = props => {
+            if (this.state.showingInfoWindow) {
+                  this.setState({
+                        showingInfoWindow: false,
+                        activeMarker: null
+                  });
+            }
+      };
 
       render() {
-            const MapComponent = withScriptjs(withGoogleMap(Map));
+            const mapStyles = {
+                  width: '100%',
+                  height: '100%',
+            };
+            // const MapComponent = withScriptjs(withGoogleMap(Map));
             const profileData = this.state.results;
             let listProfile = profileData.filter(items => {
                   if (this.state.search) {
@@ -199,15 +245,20 @@ export class Dashboard extends Component {
 
                               </div>
                               <div className="col-6">
-                                    <MapComponent
-                                          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${"AIzaSyBsytc-M60hbCyVoYJaLYYb6hMfwgmB3Mc"}`}
-                                          loadingElement={<div style={{ height: `100%` }} />}
-                                          containerElement={<div style={{ height: `100%` }} />}
-                                          mapElement={<div style={{ height: `100%` }} />}
-                                    // setmodal={setmodal}
-                                    // setData={setData}
-                                    />
-                                    {/* <Map Data={profileData} /> */}
+                                    <Map
+                                          google={this.props.google}
+                                          zoom={8}
+                                          style={mapStyles}
+                                          initialCenter={{ lat: 33.723137, lng: -84.579597 }}
+                                    >
+                                          {this.displayMarkers()}
+                                          <InfoWindow
+                                                marker={this.state.activeMarker}
+                                                visible={this.state.showingInfoWindow}
+                                                onClose={this.onClose}
+                                          />
+
+                                    </Map>
                               </div>
 
                         </div>
@@ -218,7 +269,9 @@ export class Dashboard extends Component {
 }
 
 
+export default GoogleApiWrapper({
+      apiKey: 'AIzaSyAg6t3cviByjFLcfuzOt1OCUz-5XeIf82A'
+})(Dashboard);
 
-export default Dashboard
 
 

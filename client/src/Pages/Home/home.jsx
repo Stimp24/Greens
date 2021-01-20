@@ -12,7 +12,7 @@ class Home extends Component {
                   <div>
                         <MastHeadwithCOA
                               sectionClass="randomppl -re_mb-40"
-                              title="Best place to buy pre-Forclosure and forclosure homes"
+                              title="Best place to buy REO properties"
                               titleClass="text-light text-center"
                         // subTitleClass="subTitleColor"
                         // subTitle="Most popular place to meet random people from around the world"
