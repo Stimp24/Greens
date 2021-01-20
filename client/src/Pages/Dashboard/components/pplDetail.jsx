@@ -9,11 +9,9 @@ import Gallery from "../components/gallery"
 //scss
 import "../scss/pplDetail.scss"
 
-export default function pplDetail(props) {
+const PplDetail = (props) => {
       const items = props.location.state.items;
-      const title = items.fullAddress.streetName
 
-      console.log(items)
       return (
             <div>
                   <section className="basicInfo -ta_description">
@@ -65,3 +63,4 @@ export default function pplDetail(props) {
             </div>
       )
 }
+export default PplDetail

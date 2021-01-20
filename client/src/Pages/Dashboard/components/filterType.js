@@ -1,7 +1,8 @@
 import React from 'react'
 import MultiSelect from "react-multi-select-component";
 import "../scss/filter.scss"
-export default function FilterType(props) {
+import TextInput from "../../Global/components/reusuable/Input/TextInput"
+const FilterType = (priceValue, handleChange, propertySelected, bath, bed, status) => {
       const options = [
             { label: "House", value: "house" },
             { label: "Condo", value: "condo" },
@@ -25,15 +26,15 @@ export default function FilterType(props) {
                         </div>
                         <div className="row card-body adj-height">
                               <div className="col-12 mx-auto col-md-3">
-                                    <h6 className="title ">Price</h6>
-                                    <input
+                                    <TextInput
+                                          labelName="Price"
                                           className="form-input"
                                           min="0"
                                           max="10000000"
                                           type="number"
                                           id="price-from"
                                           placeholder="$1,000,000"
-                                          value={props.priceValue}
+                                          value={priceValue}
                                     />
                               </div>
                               <div className="col-12 mx-auto col-md-3">
@@ -42,8 +43,8 @@ export default function FilterType(props) {
                                           className="mx-auto form-check-input"
                                           name="Property Type"
                                           options={options}
-                                          onChange={props.handleChange}
-                                          value={props.propertySelected}
+                                          onChange={handleChange}
+                                          value={propertySelected}
                                     />
                               </div>
                               <div className="col-12 mx-auto col-md-3">
@@ -51,8 +52,8 @@ export default function FilterType(props) {
                                     <select
                                           className=" mx-auto form-select form-check-input"
                                           name="filter"
-                                          value={props.bath}
-                                          onChange={props.handleChange}
+                                          value={bath}
+                                          onChange={handleChange}
                                     >
                                           <option value="">1+</option>
                                           <option value="">2+</option>
@@ -67,8 +68,8 @@ export default function FilterType(props) {
                                     <select
                                           className=" mx-auto form-select form-check-input"
                                           name="filter"
-                                          value={props.bed}
-                                          onChange={props.handleChange}
+                                          value={bed}
+                                          onChange={handleChange}
                                     >
                                           <option value="">1+</option>
                                           <option value="">2+</option>
@@ -84,8 +85,8 @@ export default function FilterType(props) {
                                           className="mx-auto form-check-input"
                                           name="filter"
                                           options={optionStatus}
-                                          onChange={props.handleChange}
-                                          value={props.status}
+                                          onChange={handleChange}
+                                          value={status}
                                     />
 
                               </div>
@@ -96,3 +97,4 @@ export default function FilterType(props) {
 }
 
 
+export default FilterType

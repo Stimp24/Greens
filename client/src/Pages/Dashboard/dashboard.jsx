@@ -159,7 +159,7 @@ export class Dashboard extends Component {
                   } else return items;
             });
             return (
-                  <div className="container">
+                  <div>
                         <div className="row">
                               <div className="col-12 -re_mt-25 -re_mb-25">
                                     <Search
