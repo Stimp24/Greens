@@ -12,7 +12,7 @@ class Home extends Component {
                   <div>
                         <MastHeadwithCOA
                               sectionClass="randomppl -re_mb-40"
-                              title="Best place to buy property for fair market value"
+                              title="Best place to buy pre-Forclosure and forclosure homes"
                               titleClass="text-light text-center"
                         // subTitleClass="subTitleColor"
                         // subTitle="Most popular place to meet random people from around the world"
@@ -20,11 +20,11 @@ class Home extends Component {
                         // button="Get Started"
                         />
 
-                        <SliderHomes
+                        {/* <SliderHomes
                               sectionClass="reSlider -re_mb-40"
                               outterContainer="col-12 slide"
                               state="Florida"
-                        />
+                        /> */}
                         <HowItWorks />
 
                         <ContentPanelWithImg
