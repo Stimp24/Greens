@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
-function MastHeadwithImg(props) {
+function MastHeadwithImg({ sectionClass, titleClass, title, subTitleClass, subTitle, paragraphClass, paragraph, buttonClass, button }) {
       return (
-            <section className={props.sectionClass ? props.sectionClass : "jumbotron"}>
+            <section className={sectionClass ? sectionClass : "jumbotron"}>
                   <div className="container">
-                        <h1 className={props.titleClass ? props.titleClass : "display-4"}>{props.title}</h1>
-                        <p className={props.subTitleClass ? props.subTitleClass : "lead"}>{props.subTitle}</p>
-                        <div className={props.paragraphClass ? props.paragraphClass : "my-4"}>
-                              <p>{props.paragraph}</p>
-                              <Link className={props.buttonClass ? props.buttonClass : "btn btn-primary btn-lg"} to="#" >{props.button}</Link>
+                        <h1 className={titleClass ? titleClass : "display-4"}>{title}</h1>
+                        <p className={subTitleClass ? subTitleClass : "lead"}>{subTitle}</p>
+                        <div className={paragraphClass ? paragraphClass : "my-4"}>
+                              <p>{paragraph}</p>
+                              <Link className={buttonClass ? buttonClass : "btn btn-primary btn-lg"} to="#" >{button}</Link>
                         </div>
                   </div>
 

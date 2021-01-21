@@ -1,21 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-function ContentPanelWithImg(props) {
-      console.log(props)
+const ContentPanelWithImg = ({ sectionClass, titleClass, title, content, img }) => {
       return (
-            <section className={props.sectionClass ? props.sectionClass : null}>
+            <section className={sectionClass ? sectionClass : null}>
                   <div className="fluid-container">
                         <div className="row no-gutters ">
                               <div className="col-md-6 col-sm-12">
                                     <div className="col-12">
                                           <div className="mt-5">
                                                 <div className="col-12 mx-auto">
-                                                      <h2 className={props.titleClass ? props.titleClass : null}>
-                                                            {props.title}
+                                                      <h2 className={titleClass ? titleClass : null}>
+                                                            {title}
                                                       </h2>
                                                 </div>
                                                 <div className="mx-auto pl-3">
-                                                      {props.content && props.content.map(paragraphs => {
+                                                      {content && content.map(paragraphs => {
                                                             return (
                                                                   <p>{paragraphs}</p>
                                                             )
@@ -28,7 +27,7 @@ function ContentPanelWithImg(props) {
                                     </div>
                               </div>
                               <div className="col-md-6 col-sm-12 -re_mt-70">
-                                    <div className={props.img} />
+                                    <div className={img} />
                               </div>
                         </div>
                   </div>
