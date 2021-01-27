@@ -12,10 +12,11 @@ class Home extends Component {
                   <div>
                         <MastHeadwithCOA
                               sectionClass="randomppl -re_mb-40"
-                              title="Best place to buy REO properties"
+                              // title="Best place to buy REO properties"
+                              title="ForeList Homes"
                               titleClass="text-light text-center"
-                        // subTitleClass="subTitleColor"
-                        // subTitle="Most popular place to meet random people from around the world"
+                              subTitleClass="subTitleColor text-center"
+                              subTitle="A new way of looking at homes"
                         // buttonClass="btn btn-primary btn-lg adjBtn btn-light"
                         // button="Get Started"
                         />

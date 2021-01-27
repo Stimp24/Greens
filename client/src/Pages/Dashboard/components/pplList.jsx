@@ -96,6 +96,17 @@ export default function PplList(props) {
                                           </div> */}
 
                                     </div>
+                                    <div className="card-footer">
+                                          <Link
+                                                to={{
+                                                      pathname: "/offer/" + items.id + items.fullAddress.streetNumber + items.fullAddress.streetName,
+                                                      state: {
+                                                            items: props.items
+                                                      }
+                                                }}
+                                          >Offer</Link>
+                                    </div>
+
                               </div>
                         </div>
                   </Link>

@@ -19,13 +19,13 @@ const FilterType = (priceValue, handleChange, propertySelected, bath, bed, statu
             { label: "Sold", value: "sold" },
       ]
       return (
-            <div className="card">
+            <div className="card adj-height">
                   <div className="card-group-item">
                         <div className="col-12 card-header">
                               <h6 className="title ">Filter </h6>
                         </div>
-                        <div className="row card-body adj-height">
-                              <div className="col-12 mx-auto col-md-3">
+                        <div className="row card-body">
+                              {/* <div className="col-12 mx-auto col-md-3">
                                     <TextInput
                                           labelName="Price"
                                           className="form-input"
@@ -36,7 +36,7 @@ const FilterType = (priceValue, handleChange, propertySelected, bath, bed, statu
                                           placeholder="$1,000,000"
                                           value={priceValue}
                                     />
-                              </div>
+                              </div> */}
                               <div className="col-12 mx-auto col-md-3">
                                     <h6 className="title ">Property Type </h6>
                                     <MultiSelect
