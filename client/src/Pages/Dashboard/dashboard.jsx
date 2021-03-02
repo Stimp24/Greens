@@ -8,6 +8,7 @@ import Search from "../Global/components/reusuable/SearchBar/search"
 //import Map from "./components/map"
 import * as Data from '../api/data.json'
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import "./scss/filter.scss"
 export class Dashboard extends Component {
       constructor(props) {
             super(props);
@@ -215,7 +216,7 @@ export class Dashboard extends Component {
                               </div>
                         </div>
                         <div className="row">
-                              <div className="col-12 mb-3">
+                              <div className="col-12 mb-3 -fh_filter">
                                     <FilterType
                                           handleChange={this.handleChange}
                                           priceValue={this.state.price}
